@@ -1,0 +1,2 @@
+class Idchemin < ApplicationRecord
+end

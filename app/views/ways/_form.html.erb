@@ -1,0 +1,52 @@
+<%= form_with(model: way) do |form| %>
+  <% if way.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(way.errors.count, "error") %> prohibited this way from being saved:</h2>
+
+      <ul>
+        <% way.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :depart, style: "display: block" %>
+    <%= form.text_field :depart %>
+  </div>
+
+  <div>
+    <%= form.label :arrive, style: "display: block" %>
+    <%= form.text_field :arrive %>
+  </div>
+
+  <div>
+    <%= form.label :chemin, style: "display: block" %>
+    <%= form.number_field :chemin %>
+  </div>
+
+  <div>
+    <%= form.label :dx, style: "display: block" %>
+    <%= form.number_field :dx %>
+  </div>
+
+  <div>
+    <%= form.label :dy, style: "display: block" %>
+    <%= form.number_field :dy %>
+  </div>
+
+  <div>
+    <%= form.label :ax, style: "display: block" %>
+    <%= form.number_field :ax %>
+  </div>
+
+  <div>
+    <%= form.label :ay, style: "display: block" %>
+    <%= form.number_field :ay %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

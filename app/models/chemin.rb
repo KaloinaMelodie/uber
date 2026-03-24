@@ -1,0 +1,2 @@
+class Chemin < ApplicationRecord
+end

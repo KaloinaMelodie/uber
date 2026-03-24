@@ -1,0 +1,29 @@
+<%= form_with(model: list) do |form| %>
+  <% if list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+        <% list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :idtaxi, style: "display: block" %>
+    <%= form.number_field :idtaxi %>
+  </div>
+
+  <div>
+    <%= form.label :idclient, style: "display: block" %>
+    <%= form.number_field :idclient %>
+  </div>
+
+  
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module VnearHelper
+end

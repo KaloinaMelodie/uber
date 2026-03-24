@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%=link_to 'Ruberails' , root_path, class:"navbar-brand"%>
+          <%=link_to 'Login' , logins_path, class:"navbar-brand"%>
+          <%=link_to 'Home' , root_path, class:"navbar-brand"%>
+            <%=link_to 'Near' , home_about_path, class:"navbar-brand"%>
+            <%=link_to 'Show Taxis' , taxis_path, class:"navbar-brand"%>
+            <%=link_to 'Add Taxis' , new_taxi_path, class:"navbar-brand"%>
+            <%=link_to 'Set Position' , positions_path, class:"navbar-brand"%>
+            <%=link_to 'Ways' , ways_path, class:"navbar-brand"%>
+        </div>
+
+      </div>
+    </nav>

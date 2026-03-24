@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @idchemin %>
+
+<div>
+  <%= link_to "Edit this idchemin", edit_idchemin_path(@idchemin) %> |
+  <%= link_to "Back to idchemins", idchemins_path %>
+
+  <%= button_to "Destroy this idchemin", @idchemin, method: :delete %>
+</div>

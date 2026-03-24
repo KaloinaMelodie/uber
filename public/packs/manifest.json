@@ -1,0 +1,84 @@
+{
+  "application.js": "/packs/js/application-2181adcc3224cdc0c9c1.js",
+  "application.js.map": "/packs/js/application-2181adcc3224cdc0c9c1.js.map",
+  "bootstrap.js": "/packs/js/bootstrap-48fc96ea5ffb64a82aea.js",
+  "bootstrap.js.map": "/packs/js/bootstrap-48fc96ea5ffb64a82aea.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-2181adcc3224cdc0c9c1.js"
+      ],
+      "js.map": [
+        "/packs/js/application-2181adcc3224cdc0c9c1.js.map"
+      ]
+    },
+    "bootstrap": {
+      "js": [
+        "/packs/js/bootstrap-48fc96ea5ffb64a82aea.js"
+      ],
+      "js.map": [
+        "/packs/js/bootstrap-48fc96ea5ffb64a82aea.js.map"
+      ]
+    },
+    "grid": {
+      "js": [
+        "/packs/js/grid-6fe4084c75c41ee07f67.js"
+      ],
+      "js.map": [
+        "/packs/js/grid-6fe4084c75c41ee07f67.js.map"
+      ]
+    },
+    "gridSolution": {
+      "js": [
+        "/packs/js/gridSolution-1114c06999faa206d0a7.js"
+      ],
+      "js.map": [
+        "/packs/js/gridSolution-1114c06999faa206d0a7.js.map"
+      ]
+    },
+    "index": {
+      "js": [
+        "/packs/js/index-365faf222f4ba89b6295.js"
+      ],
+      "js.map": [
+        "/packs/js/index-365faf222f4ba89b6295.js.map"
+      ]
+    },
+    "jquery": {
+      "js": [
+        "/packs/js/jquery-9c504e1d7417dedc265f.js"
+      ],
+      "js.map": [
+        "/packs/js/jquery-9c504e1d7417dedc265f.js.map"
+      ]
+    },
+    "npm": {
+      "js": [
+        "/packs/js/npm-dfe2553cec509d86a6b1.js"
+      ],
+      "js.map": [
+        "/packs/js/npm-dfe2553cec509d86a6b1.js.map"
+      ]
+    },
+    "script": {
+      "js": [
+        "/packs/js/script-3718bf8ef993c6b3442b.js"
+      ],
+      "js.map": [
+        "/packs/js/script-3718bf8ef993c6b3442b.js.map"
+      ]
+    }
+  },
+  "grid.js": "/packs/js/grid-6fe4084c75c41ee07f67.js",
+  "grid.js.map": "/packs/js/grid-6fe4084c75c41ee07f67.js.map",
+  "gridSolution.js": "/packs/js/gridSolution-1114c06999faa206d0a7.js",
+  "gridSolution.js.map": "/packs/js/gridSolution-1114c06999faa206d0a7.js.map",
+  "index.js": "/packs/js/index-365faf222f4ba89b6295.js",
+  "index.js.map": "/packs/js/index-365faf222f4ba89b6295.js.map",
+  "jquery.js": "/packs/js/jquery-9c504e1d7417dedc265f.js",
+  "jquery.js.map": "/packs/js/jquery-9c504e1d7417dedc265f.js.map",
+  "npm.js": "/packs/js/npm-dfe2553cec509d86a6b1.js",
+  "npm.js.map": "/packs/js/npm-dfe2553cec509d86a6b1.js.map",
+  "script.js": "/packs/js/script-3718bf8ef993c6b3442b.js",
+  "script.js.map": "/packs/js/script-3718bf8ef993c6b3442b.js.map"
+}

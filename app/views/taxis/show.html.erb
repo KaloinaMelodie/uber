@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @taxi %>
+
+<div>
+  <%= link_to "Edit this taxi", edit_taxi_path(@taxi) %> |
+  <%= link_to "Back to taxis", taxis_path %>
+
+  <%= button_to "Destroy this taxi", @taxi, method: :delete %>
+</div>

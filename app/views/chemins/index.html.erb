@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "Retour", ways_path %>
+<h1>Chemins</h1>
+
+<div id="chemins">
+  <table border="1" class="table table-striped table-dark">
+     <tr>
+         <th>Chemin</th>
+         <th>id:</th>
+         <th>x:</th>
+         <th>y:</th>
+     </tr>
+  <% @chemins.each do |chemin| %>
+    <tr>
+      <td>
+        <%= chemin.chemin %>
+      </td>
+      <td>
+        <%= chemin.id %>
+      </td>
+      <td>
+        <%= chemin.x %>
+      </td>
+      <td>
+        <%= chemin.y %>
+      </td>
+      <td>
+        <%= link_to "Show this chemin", chemin %>
+      </td>
+    </tr>
+  <% end %>
+</div>
+
+<%= link_to "New chemin", new_chemin_path %>

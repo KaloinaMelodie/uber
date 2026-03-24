@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @chemin %>
+
+<div>
+  <%= link_to "Edit this chemin", edit_chemin_path(@chemin) %> |
+  <%= link_to "Back to chemins", chemins_path %>
+
+  <%= button_to "Destroy this chemin", @chemin, method: :delete %>
+</div>

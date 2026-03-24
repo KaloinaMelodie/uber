@@ -1,0 +1,29 @@
+---
+prefix: c:/Ruby31-x64
+bindir: c:/Ruby31-x64/bin
+libdir: c:/Ruby31-x64/lib
+datadir: c:/Ruby31-x64/share
+mandir: c:/Ruby31-x64/share/man
+docdir: c:/Ruby31-x64/share/doc
+rbdir: c:/Ruby31-x64/lib/ruby/site_ruby/3.1.0
+sodir: c:/Ruby31-x64/lib/ruby/site_ruby/3.1.0/x64-ucrt
+sysconfdir: ''
+localstatedir: "/var"
+libruby: c:/Ruby31-x64/lib/ruby
+librubyver: c:/Ruby31-x64/lib/ruby/3.1.0
+librubyverarch: c:/Ruby31-x64/lib/ruby/3.1.0/x64-mingw-ucrt
+siteruby: c:/Ruby31-x64/lib/ruby/site_ruby
+siterubyver: c:/Ruby31-x64/lib/ruby/site_ruby/3.1.0
+siterubyverarch: c:/Ruby31-x64/lib/ruby/site_ruby/3.1.0/x64-ucrt
+rubypath: c:/Ruby31-x64/bin/ruby.exe
+rubyprog: c:/Ruby31-x64/bin/ruby.exe
+makeprog: make
+extconfopt: ''
+shebang: ruby
+no_test: true
+no_doc: true
+no_ext: false
+install_prefix:
+root:
+installdirs: site
+type: site

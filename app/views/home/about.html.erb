@@ -1,0 +1,79 @@
+<p style="color: green"><%= notice %></p>
+<% login=Login.find(1).idclient %>
+<% client=Position.find(login) %>
+<% data=Chemin.where(chemin:Idchemin.find(1).idchem).order(:id) %>
+<div id="taxis">
+</br>
+   <h1>Near</h1>
+   <form action="<%= go_path%>">
+      <p>CLient: <%= @dis.id %></p>
+      <p>Position: <%= @dis.x %> - <%= @dis.y %></p>
+      <p>Distance:<input type="text" name="distance" value="<%= @dis.distance %>"></p>
+      <p>Destination: x:<input type="text"  id="dx" name="dx" value="<%= @dis.dx %>">
+      y:<input type="text" id="dy" name="dy" value="<%= @dis.dy %>"></p>
+      <input type="submit" value="Set">
+      </ul>
+   </form>
+   <!-- <button id="asa" onclick="changer()">Changer</button> -->
+   <!-- <input id="input" onchange="changer()"> -->
+   <input type="text" hidden="hidden" id="departx" value="<%= @dis.x %>">
+   <input type="text" hidden="hidden" id="departy" value="<%= @dis.y %>">
+   <button id="go">Let's Go</button>
+   <select id="list" name="chemin" hidden="hidden">
+      <% data.each do |e|%>
+         <option value="<%= e.x.to_s+"-"+e.y.to_s%>"><%= e.x.to_s+"-"+e.y.to_s%></option>
+         <% end%>
+   </select>
+   <div id="exemple"></div>
+    <table border="1" class="table table-striped table-dark">
+     <tr>
+         <th>Numero</th>
+         <th>x:</th>
+         <th>y:</th>
+         <th>nbre passager</th>
+     </tr>
+    <% @taxis.each do |taxi| %>
+      <% nbrepassager=List.where(idtaxi:taxi.id).count %>
+       <tr>
+          <td><%= taxi.numero %></td>
+          <td><%= taxi.x %></td>
+          <td><%= taxi.y %></td>
+          <td>
+             <%= nbrepassager %>
+          </td>
+          <td>
+            <% the= List.where(idtaxi:taxi.id, idclient:login)
+             count=the.count %>
+             <% if count==1 then %>
+             <%= button_to "Miala ao @ le Taxi", List.find(the[0].id), method: :delete %>
+             <% elsif count==0 and List.where(idtaxi:taxi.id).count<2  then %>
+               <% if nbrepassager==0 or (nbrepassager!=0 and taxi.dx==client.dx and taxi.dy==client.dy) %>
+                  <%= link_to "Faire Venir Taxi", lists_miditra_path(:idtaxi =>taxi.id,:idclient=>login) %>
+               <% end %>
+            <% end %>
+          </td>
+          <td>
+            <% if count==1 then %>
+               <%= link_to "Go", aller_path(:dx =>client.dx,:dy=>client.dy,:idtaxi=>taxi.id) %>
+               <% end %>
+          </td>
+       </tr>
+    <% end %>
+    </table>
+
+    <div id="gameContainer">
+      <canvas id="gameCanvas" width="5000" height="5000"></canvas>
+   </div>
+</div>
+<script type="text/javascript">
+   function changer(){
+    var exemple=document.getElementById("exemple");
+   
+    var index=document.getElementById("input").value;
+    var liste=["😀","😥"]
+    exemple.innerHTML=liste[index]
+    // document.getElementById("exemple").innerHTML="<h1>OOOO😮</h1>"
+    const canvas = document.getElementById('gameCanvas');
+   const ctx = canvas.getContext('2d');
+}
+</script>

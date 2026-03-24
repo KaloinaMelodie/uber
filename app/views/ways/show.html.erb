@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @way %>
+
+<div>
+  <%= link_to "Edit this way", edit_way_path(@way) %> |
+  <%= link_to "Back to ways", ways_path %>
+
+  <%= button_to "Destroy this way", @way, method: :delete %>
+</div>

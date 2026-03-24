@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ways</h1>
+
+<div id="ways">
+  <table border="2" class="table table-striped table-dark">
+     <tr>
+         <th>Depart</th>
+         <th>Arrive</th>
+         <th>Chemin</th>
+         <th>dx:</th>
+         <th>dy:</th>
+         <th>ax:</th>
+         <th>ay:</th>
+     </tr>
+  <% @ways.each do |way| %>
+    <tr>
+         <td><%= way.depart %></td>
+         <td><%= way.arrive %></td>
+         <td><%= way.chemin %></td>
+         <td><%= way.dx %></td>
+         <td><%= way.dy %></td>
+         <td><%= way.ax %></td>
+         <td><%= way.ay %></td>
+    <td>
+      <%= link_to "Show this way", way %>
+    </td>
+    <td>
+      <%=link_to 'Show chemin of this way' , list_chemins_path(:chemin => way.chemin)%>
+    </td>
+     </tr>
+  <% end %>
+</div>
+<%= link_to "New way", new_way_path %>
