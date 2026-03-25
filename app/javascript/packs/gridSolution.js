@@ -146,9 +146,9 @@
     var options = document.getElementById('list').options;
     for(let i=0;i<options.length-1;i++){
       // console.log(options[i].value);
-      const xy=options[i].value.split("-");
+      const xy=options[i].value.split("-").map(Number);
       points.push(xy);
-      const xy1=options[i+1].value.split("-");
+      const xy1=options[i+1].value.split("-").map(Number);
       points.push(xy1);
       lines.push(new Line('red', 1, xy[0]*50, xy[1]*50, xy1[0]*50, xy1[1]*50).draw(ctx));
       if(i==0){
@@ -165,7 +165,12 @@
     var ay1=parseInt(document.getElementById('dy').value);
     arrivex=ax1;arrivey=ay1;
     for(let i=0;i<points.length-1;i++){
-      if(points[i][0]<=dx1&&dx1<=points[i+1][0]&&points[i][1]<=dy1&&dy1<=points[i+1][1]){
+      if(
+        dx1 >= Math.min(points[i][0], points[i+1][0]) &&
+        dx1 <= Math.max(points[i][0], points[i+1][0]) &&
+        dy1 >= Math.min(points[i][1], points[i+1][1]) &&
+        dy1 <= Math.max(points[i][1], points[i+1][1])
+      ){
         e=i;
       }
     }

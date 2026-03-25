@@ -13,6 +13,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "bootstrap", "data-turbo-track": "reload" %>
+    
   
     
 
@@ -26,9 +27,10 @@
     <div class="container">
       <%= yield %>
     </div>
+    <%# <%= javascript_pack_tag 'application' %> %>
     
-    <%= javascript_pack_tag 'index' %>
-    <%= javascript_pack_tag 'gridSolution' %>
+    <%# <%= javascript_pack_tag 'index' %>   %>
+    <%= javascript_pack_tag 'gridSolution'  %>
   
 
   </body>
